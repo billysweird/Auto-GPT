@@ -1,8 +1,10 @@
 {
-  "build": {
-    "dockerfile": "./Dockerfile",
-    "context": "."
-  },
+  "dockerComposeFile": [
+		"../docker-compose.yml",
+		"docker-compose.yml"
+	],
+  "service": "auto-gpt",
+  "workspaceFolder": "/workspace",
   "features": {
     "ghcr.io/devcontainers/features/common-utils:2": {
       "installZsh": "true",
@@ -38,3 +40,4 @@
   // Set `remoteUser` to `root` to connect as root instead. More info: https://aka.ms/vscode-remote/containers/non-root.
   "remoteUser": "vscode"
 }
+
